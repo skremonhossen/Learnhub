@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes - Remon's LearnHub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Remon's LearnHub - Notes</h1>
+  </header>
+
+  <main>
+    <section>
+      <label for="subject-select">Select Subject:</label>
+      <select id="subject-select" onchange="loadChapters()">
+        <option value="">--Select--</option>
+        <option value="biology">Biology</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="physics">Physics</option>
+      </select>
+    </section>
+
+    <section id="chapter-section" style="display:none;">
+      <label for="chapter-select">Select Chapter:</label>
+      <select id="chapter-select" onchange="showNote()"></select>
+    </section>
+
+    <section id="note-section" style="display:none;">
+      <h2 id="note-title"></h2>
+      <p id="note-content"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
